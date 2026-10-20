@@ -8,19 +8,23 @@ use Exception;
 
 class Calculator
 {
+    private function format_answer(float $result): string
+    {
+        return number_format($result, 2, '.', '');
+    }
     public function sum(float $a, float $b) : float
     {
-        return $a + $b;
+        return (float) $this->format_answer($a + $b);
     }
 
     public function subtract(float $a, float $b): float
     {
-        return $a - $b;
+        return (float) $this->format_answer($a - $b);
     }
 
     public function multiply(float $a, float $b): float
     {
-        return $a * $b;
+        return (float) $this->format_answer($a * $b);
     }
 
     /**
@@ -31,6 +35,6 @@ class Calculator
         if ($b == 0) {
             throw new Exception('Division by zero');
         }
-        return $a / $b;
+        return (float) $this->format_answer($a / $b);
     }
 }
