@@ -1,0 +1,19 @@
+{
+    "name": "dmitriy-zhukov/my-test-library",
+    "description": "test library 2",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "DmitriyZhukov\\MyTestLibrary\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Дмитрий Жуков",
+            "email": "d.zhukov@babyblog.team"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    }
+}
